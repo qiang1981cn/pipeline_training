@@ -7,7 +7,7 @@ stages:
         mkdir -p /root/.m2 && mv settings.xml /root/.m2/
         mvn clean install
     env:
-      NEXUS_HOST: http://sonatype-nexus-service. sonatype-nexus-hhtq2:8081
+      NEXUS_HOST: http://sonatype-nexus-service.sonatype-nexus-hhtq2:8081
     envFrom:
     - sourceName: nexus-key
       sourceKey: token
@@ -19,7 +19,7 @@ stages:
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: index.docker.io
+      registry: registry.gitlab.com/qiang1981cn/pipeline-example-maven
     env:
       PLUGIN_INSECURE: "true"
       PLUGIN_MIRROR: http://sonatype-nexus-service.sonatype-nexus:8083
