@@ -19,11 +19,15 @@ stages:
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: 47.107.157.185:31803
+      registry: index.docker.io
     env:
       PLUGIN_INSECURE: "true"
       PLUGIN_MIRROR: http://sonatype-nexus-service.sonatype-nexus:8083
 - name: Deploy
   steps:
-  - applyYamlConfig:
-      path: ./deployment.yaml
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:pipeline-chart-demo
+      version: 0.1.0
+      name: chart-training
+      targetNamespace: chart-deploy
+notification: {}
