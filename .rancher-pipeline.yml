@@ -20,9 +20,6 @@ stages:
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: registry.gitlab.com/qiang1981cn/pipeline-example-maven
-    env:
-      PLUGIN_INSECURE: "true"
-      PLUGIN_MIRROR: http://sonatype-nexus-service.sonatype-nexus:8083
 - name: Deploy
   steps:
   - applyAppConfig:
