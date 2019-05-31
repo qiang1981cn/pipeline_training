@@ -9,7 +9,7 @@ stages:
           -Dsonar.host.url=${SONAR_HOST} \
           -Dsonar.login=${SONAR_KEY}
     env:
-      NEXUS_HOST: http://sonatype-nexus-service.sonatype-nexus:8081
+      NEXUS_HOST: http://sonatype-nexus-service.sonatype-nexus-hhtq2:8081
     envFrom:
     - sourceName: nexus-key
       sourceKey: token
