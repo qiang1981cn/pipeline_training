@@ -3,10 +3,9 @@ stages:
   steps:
   - runScriptConfig:
       image: maven:3-jdk-7
-      shellScript: |-
+      shellScript: |
         mkdir -p /root/.m2 && mv settings.xml /root/.m2/
         mvn clean install
-        exit 1
     env:
       NEXUS_HOST: http://sonatype-nexus-service.sonatype-nexus-hhtq2:8081
     envFrom:
