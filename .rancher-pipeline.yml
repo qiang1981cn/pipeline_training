@@ -27,12 +27,12 @@ stages:
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: registry.gitlab.com/cheng-rancher/pipeline-example-maven
+      registry: registry.gitlab.com/cheng-rh/pipeline-example-maven
 - name: Deploy
   steps:
   - applyAppConfig:
-      catalogTemplate: cattle-global-data:pipeline-deploy-demo
-      version: 0.1.0
+      catalogTemplate: cattle-global-data:pipeline-pipeline-deploy
+      version: 0.4.0
       answers:
         image.tag: ${CICD_EXECUTION_SEQUENCE}
       name: chart-training
