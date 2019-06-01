@@ -27,7 +27,7 @@ stages:
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: registry.gitlab.com/qiang1981cn/pipeline-example-maven
+      registry: registry.gitlab.com/cheng-rancher/pipeline-example-maven
 - name: Deploy
   steps:
   - applyAppConfig:
