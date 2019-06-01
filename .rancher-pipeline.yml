@@ -31,7 +31,7 @@ stages:
 - name: Deploy
   steps:
   - applyAppConfig:
-      catalogTemplate: cattle-global-data:pipeline-chart-demo
+      catalogTemplate: cattle-global-data:pipeline-chart-test-demo
       version: 0.1.0
       answers:
         image.tag: ${CICD_EXECUTION_SEQUENCE}
