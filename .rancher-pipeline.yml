@@ -34,7 +34,6 @@ stages:
       catalogTemplate: cattle-global-data:pipeline-deploy-demo
       version: 0.2.0
       answers:
-        image.repository: registry.gitlab.com/qiang1981cn/pipeline-example-maven/example-greenhouse
         image.tag: ${CICD_EXECUTION_SEQUENCE}
       name: chart-training
       targetNamespace: chart-deploy
