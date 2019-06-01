@@ -33,6 +33,8 @@ stages:
   - applyAppConfig:
       catalogTemplate: cattle-global-data:pipeline-chart-demo
       version: 0.1.0
+      answers:
+        image.tag: ${CICD_EXECUTION_SEQUENCE}
       name: chart-training
       targetNamespace: chart-deploy
 notification: {}
