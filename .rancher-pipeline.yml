@@ -37,4 +37,11 @@ stages:
         image.tag: ${CICD_EXECUTION_SEQUENCE}
       name: chart-training
       targetNamespace: chart-deploy
-notification: {}
+notification:
+  recipients:
+  - recipient: '#rancher-alert'
+    notifier: c-4m5g9:n-kkkwj
+  condition:
+  - Success
+  - Changed
+  - Failed
